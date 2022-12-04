@@ -1,0 +1,267 @@
+/*## Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 16px;
+   line-height: 1.4;
+}
+
+body{
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 10px;
+   background: hsl(0, 14%, 97%);
+}
+
+.container{
+   display: flex;
+   max-width: 350px;
+   flex-direction: column;
+   align-items: center;
+   padding: 15px;
+   border-radius: 20px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card{
+   display: grid;
+   grid-template-columns: 1fr;
+   place-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+.header{
+   margin-bottom: 10px;
+   padding: 10px;
+}
+
+.header img{
+   width: 170px;
+   padding: 10px 20px;
+   margin-left: 15px;
+}
+
+.hero img{
+   display: block;
+   width: 350px;
+   margin: 0 auto;
+}
+
+.hero-desktop{
+   display: none;
+}
+
+.hero{
+   margin-bottom: 30px;
+}
+
+main{
+   width: 320px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+main h1{
+   font-size: 3em;
+   padding: 0 30px;
+   line-height: 1.1;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   letter-spacing: 10px;
+   font-weight: 600;
+}
+
+main span{
+   color: hsl(0, 36%, 70%);
+   font-size: 1.1em;
+   font-weight: 200;
+}
+
+main p{
+   color: hsl(0, 36%, 70%);
+   font-size: 17px;
+   font-weight: 400;
+   line-height: 1.4;
+   margin-bottom: 30px;
+}
+
+form{
+   width: 320px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+form #email{
+   width: 275px;
+   height: 60px;
+   margin: 0 auto;
+   margin-bottom: 30px;
+   padding: 15px 25px;
+   border: 1px solid hsl(0, 36%, 70%);
+   border-radius: 30px;
+   background-color: hsl(0, 14%, 97%);
+   position: relative;
+}
+
+form #email-btn{
+   width: 70px;
+   height: 60px;
+   border: none;
+   border-radius: 50%;
+   outline: hidden;
+   background-color: hsl(0, 36%, 70%);
+   position: absolute;
+   left: 250px;
+   bottom: 50px;
+   padding: 10px 15px;
+   cursor: pointer;
+   box-shadow: hsl(0, 36%, 70%) 0px 5px 15px;
+}
+
+.form-control.error #email-btn{
+   bottom: 75px;
+   left: 230px;
+}
+
+.form-control.success #email-btn{
+   bottom: 75px;
+   left: 230px;
+}
+
+.error-img {
+   position: absolute;
+   bottom: 100px;
+   right: 110px;
+   visibility: hidden;
+}
+
+.form-control.error .error-img{
+   visibility: visible;
+   position: relative;
+   bottom: -10px;
+}
+
+.error-info{
+  position: relative;
+  margin-top: -10px;
+  visibility: hidden;
+}
+
+.form-control.error .error-info{
+   visibility: visible;
+}
+
+.form-control.success .error-info{
+   visibility: visible;
+   color: rgb(4, 147, 4);
+}
+
+
+.attribution { 
+   font-size: 11px; 
+   text-align: center; 
+}
+
+.attribution a { 
+   color: hsl(228, 45%, 44%);
+ }
+
+ @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+.container{
+   display: grid;
+   grid-template-columns: repeat(2, 450px 320px);
+   max-width: 800px;
+   padding: 5px;
+}
+
+
+.header img{
+   margin-top: 10px;
+}
+
+
+.hero img{
+   display: none;
+}
+
+.hero-desktop{
+  display: block;
+  overflow: hidden;
+}
+
+.hero-desktop img{
+   height: 500px;
+   object-fit: cover;
+}
+
+
+}
+
+
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+.container{
+   display: grid;
+   grid-template-columns: repeat(2, 450px 320px);
+   max-width: 800px;
+   padding: 5px;
+}
+
+
+.header img{
+   margin-top: 10px;
+}
+
+
+.hero img{
+   display: none;
+}
+
+.hero-desktop{
+  display: block;
+  overflow: hidden;
+}
+
+.hero-desktop img{
+   height: 500px;
+   object-fit: cover;
+}
+
+
+}
